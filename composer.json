@@ -1,0 +1,14 @@
+{
+    "name": "link/admin",
+    "autoload": {
+        "psr-4": {
+            "Link\\LinkAdmin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "link"
+        }
+    ],
+    "require": {}
+}
