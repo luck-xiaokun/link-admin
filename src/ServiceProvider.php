@@ -19,7 +19,7 @@ class ServiceProvider extends frameServiceProvider
     }
 
     /**
-     * 发布至config
+     * 内容发布
      * @return void
      * @develop yikun.lu
      * 2023/4/9
