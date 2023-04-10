@@ -1,8 +1,8 @@
 {
-    "name": "link/admin",
+    "name": "lynk/lynk-admin",
     "autoload": {
         "psr-4": {
-            "Link\\LinkAdmin\\": "src/"
+            "Lynk\\LynkAdmin\\": "src/"
         }
     },
     "authors": [

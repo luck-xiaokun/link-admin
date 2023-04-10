@@ -1,6 +1,6 @@
 <?php
 
-namespace Link\LinkAdmin\Controllers;
+namespace Lynk\LynkAdmin\Controllers;
 
 use Illuminate\Routing\Controller as frameController;
 

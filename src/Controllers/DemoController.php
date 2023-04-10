@@ -1,6 +1,6 @@
 <?php
 
-namespace Link\LinkAdmin\Controllers;
+namespace Lynk\LynkAdmin\Controllers;
 
 class DemoController extends BaseController
 {

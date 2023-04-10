@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Link\LinkAdmin;
+namespace Lynk\LynkAdmin;
 
 use Illuminate\Support\ServiceProvider as frameServiceProvider;
 
@@ -27,8 +27,8 @@ class ServiceProvider extends frameServiceProvider
     protected function registerPublishes(): void
     {
         $this->publishes([
-            __DIR__ . '/Config/linkCore.php' => config_path("linkCore.php"),
-            __DIR__ . '/Config/linkAuth.php' => config_path("linkAuth.php"),
+            __DIR__ . '/Config/lynkCore.php' => config_path("lynkCore.php"),
+            __DIR__ . '/Config/lynkAuth.php' => config_path("lynkAuth.php"),
         ]);
     }
 
