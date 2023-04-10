@@ -5,10 +5,21 @@
             "Lynk\\LynkAdmin\\": "src/"
         }
     },
+    "homepage": "https://github.com/luck-xiaokun/link-admin",
     "authors": [
         {
             "name": "link"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^10.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "lynk\\lynkAdmin\\ServiceProvider"
+            ]
+        }
+    }
 }
