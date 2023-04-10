@@ -13,11 +13,6 @@ class ServiceProvider extends frameServiceProvider
         $this->registerPublishes();
     }
 
-    public function boot()
-    {
-
-    }
-
     /**
      * 内容发布
      * @return void
