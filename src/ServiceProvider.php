@@ -1,16 +1,32 @@
 <?php
-declare(strict_types=1);
-
 namespace Lynk\LynkAdmin;
 
 use Illuminate\Support\ServiceProvider as frameServiceProvider;
 
 class ServiceProvider extends frameServiceProvider
 {
+    protected array $middleware = [];
 
     public function register()
     {
+        $this->registerBase();
+        $this->registerRouterOrMiddleware();
         $this->registerPublishes();
+    }
+
+    protected function registerBase()
+    {
+        $this->mergeConfigFrom(__DIR__.'/Config/lynkCore.php','lynkCore');
+    }
+
+    protected function registerRouterOrMiddleware()
+    {
+        //注册中间键
+        foreach ($this->middleware as $key => $middleware) {
+            app('router')->aliasMiddleware($key, $middleware);
+        }
+        //注册路由
+        $this->loadRoutesFrom(__DIR__.'/Router/admin.php');
     }
 
     /**
@@ -26,6 +42,5 @@ class ServiceProvider extends frameServiceProvider
             __DIR__ . '/Config/lynkAuth.php' => config_path("lynkAuth.php"),
         ]);
     }
-
 
 }
